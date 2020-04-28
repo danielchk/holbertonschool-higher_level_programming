@@ -6,7 +6,6 @@ if number < 0:
 else:
     res = (number % 10)
 print("Last digit of {:d} is {:d}".format(number, res), end=" ")
-
 if res == 0:
     print("and is 0")
 elif res > 5:
