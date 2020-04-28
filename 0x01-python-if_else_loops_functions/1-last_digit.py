@@ -5,7 +5,7 @@ if number < 0:
     res = (number % -10)
 else:
     res = (number % 10)
-print("Last digist of", number, "is", res)
+print("Last digist of", number, "is", res, end=' ')
 
 if res == 0:
     print("and is 0")
