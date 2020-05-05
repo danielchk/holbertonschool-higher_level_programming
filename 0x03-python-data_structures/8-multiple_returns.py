@@ -5,4 +5,3 @@ def multiple_returns(sentence):
     else:
         lenfirst = (0, None)
     return lenfirst
-    
