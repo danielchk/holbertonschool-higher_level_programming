@@ -3,29 +3,31 @@
 
 
 class Square:
+    """square with size
     """
-    """
-    def __init__(self, size=0):
-        """initializes the square
+    def __init__(self, size=0, position=(0, 0)):
+        """
         Args:
-            size (int): size of the square
+            size (int): size of a square
+            position: coord of square
         """
         self.size = size
+        self.position = position
 
     def area(self):
-        """return square area
+        """return area of the square
         """
         return (self.__size) ** 2
 
     @property
     def size(self):
-        """size of the square
+        """size self
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """size greater than zero
+        """set a vakue for size
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -36,7 +38,7 @@ class Square:
                 self.__size = value
 
     def my_print(self):
-        """prints the square
+        """print the square whit #
         """
         if self.__size == 0:
             print()
@@ -49,14 +51,13 @@ class Square:
 
     @property
     def position(self):
-        """
-            The position in 2D space
+        """add position
         """
         return self.__position
 
     @position.setter
     def position(self, value):
-        """set the position of the square
+        """set the position
         """
         if type(value) is not tuple or len(value) != 2 or \
            type(value[0]) is not int or value[0] < 0 or \
