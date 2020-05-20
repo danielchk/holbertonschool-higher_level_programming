@@ -3,29 +3,29 @@
 
 
 class Square:
-    """
+    """square with size
     """
     def __init__(self, size=0):
-        """initializes the square
+        """
         Args:
-            size (int): size of the square
+            size (int): size of a square
         """
         self.size = size
 
     def area(self):
-        """return square area
+        """return area of the square
         """
         return (self.__size) ** 2
 
     @property
     def size(self):
-        """size of the square
+        """size self
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """size greater than zero
+        """set a vakue for size
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
