@@ -1,0 +1,59 @@
+``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Importing the function from the module:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+string text:
+    >>> text_indentation("hello? holberton: school.")
+    hello?
+    <BLANKLINE>
+    holberton:
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+
+only special characters in text:
+    >>> text_indentation("?:.")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+many spaces in text:
+    >>> text_indentation("hello     ?    holberton:       school.    ")
+    hello     ?
+    <BLANKLINE>
+    holberton:
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+
+not special characters in text:
+    >>> text_indentation("hello holberton school")
+    hello holberton school
+
+no args in text:
+    >>> text_indentation( )
+    Traceback (most recent call last):
+                   ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+only spaces in text:
+    >>> text_indentation("    ")
+
+only one word in text:
+    >>> text_indentation("hello")
+    hello
+
+two args in text:
+    >>> text_indentation("hello", "world")
+    Traceback (most recent call last):
+                   ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+

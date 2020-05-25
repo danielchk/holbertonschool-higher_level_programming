@@ -1,0 +1,68 @@
+The ``2-matrix div`` module
+===================
+
+Using ``matrix div``
+------------------
+
+import module:
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+int matrix and div int:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0]]
+
+int matrix and div float:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, 0.5)
+    [[4.0, 8.0, 12.0, 16.0], [20.0, 24.0, 28.0, 32.0]]
+
+int matrix and div zero:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+           ...
+    ZeroDivisionError: division by zero
+
+matrix with negative elements and int div:
+    >>> matrix = [[-2, 4, -6, 8], [10, -12, 14, -16]]
+    >>> matrix_divided(matrix, 2)
+    [[-1.0, 2.0, -3.0, 4.0], [5.0, -6.0, 7.0, -8.0]]
+
+int matrix and negative div:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, -2)
+    [[-1.0, -2.0, -3.0, -4.0], [-5.0, -6.0, -7.0, -8.0]]
+
+matrix with float numbers and int div:
+    >>> matrix = [[2, 4.4, 6, 8.8], [10, 12.12, 14, 16.16]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.2, 3.0, 4.4], [5.0, 6.06, 7.0, 8.08]]
+
+matrix with strings and int div:
+    >>> matrix = [[2, "cuatro", 6, "ocho"], [10, "doce", 14, "dieciseis"]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+           ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+int matrix and string in div:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, "dos")
+    Traceback (most recent call last):
+           ...
+    TypeError: div must be a number
+
+different sizes in matrix and int div
+    >>> matrix = [[2, 4, 6], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+           ...
+    TypeError: Each row of the matrix must have the same size
+
+int matrix and no div:
+    >>> matrix = [[2, 4, 6, 8], [10, 12, 14, 16]]
+    >>> matrix_divided(matrix, )
+    Traceback (most recent call last):
+           ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'

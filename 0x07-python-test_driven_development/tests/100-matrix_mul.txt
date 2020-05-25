@@ -1,0 +1,42 @@
+``100-matrix_mul`` module
+===================
+
+Using ``matrix_mul``
+------------------
+
+import module:
+         >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+int m_a and int m_b:
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [[5, 6], [7, 8]]
+    >>> matrix_mul(m_a, m_b)
+    [[19, 22], [43, 50]]
+
+int m_a and one empty element m_b:
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [[5, 6], []]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+                   ...
+    TypeError: each row of m_b must should be of the same size
+
+int m_a and only one element in m_b:
+     >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [5, 6]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+                   ...
+    TypeError: object of type 'int' has no len()
+
+float m_a and int m_b:
+    >>> m_a = [[1.2, 2.4], [3, 4]]
+    >>> m_b = [[5, 6], [7, 8]]
+    >>> matrix_mul(m_a, m_b)
+    [[22.8, 26.4], [43, 50]]
+
+negative int m_a and int m_b:
+    >>> m_a = [[-1, 2], [-3, 4]]
+    >>> m_b = [[5, 6], [7, 8]]
+    >>> matrix_mul(m_a, m_b)
+    [[9, 10], [13, 14]]
