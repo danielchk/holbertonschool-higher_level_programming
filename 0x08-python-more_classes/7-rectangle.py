@@ -65,7 +65,8 @@ class Rectangle:
         """string of the definition of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join(str(self.print_symbol) * self.__width for i in range(self.__height))
+            string += "\n".join(str(self.print_symbol) * /
+                                self.__width for i in range(self.__height))
         return string
 
     def __repr__(self):
