@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module with class 
+module with class
 """
 
 
