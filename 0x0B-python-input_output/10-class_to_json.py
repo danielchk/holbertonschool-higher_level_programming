@@ -5,7 +5,5 @@ module with a function
 
 
 def class_to_json(obj):
-    """
-    returns dictionary
-    """
+    """ returns dictionary """
     return (obj.__dict__)
