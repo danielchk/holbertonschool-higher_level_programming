@@ -78,4 +78,3 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        
