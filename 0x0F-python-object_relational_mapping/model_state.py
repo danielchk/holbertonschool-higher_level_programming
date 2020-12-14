@@ -7,9 +7,8 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-
 class State(Base):
-    """Represents a state for a MySQL database.
+    """Database
     __tablename__ : The name of the MySQL table to store States.
     id (sqlalchemy.Integer): The state's id.
     name (sqlalchemy.String): The state's name.
