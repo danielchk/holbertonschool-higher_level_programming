@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Prints the first State object from the database
+"""
+Prints the first State object from the database
+"""
 
 import sys
 from sqlalchemy import create_engine
