@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Displays all values in the states table of the database
+"""
+Displays all values in the states table of the database
+"""
 
 import sys
 import MySQLdb
