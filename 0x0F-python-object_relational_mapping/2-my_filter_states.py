@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-takes in an argument and displays all values in the states 
+takes in an argument and displays all values in the states
 table of where name matches the argument.
 """
 
