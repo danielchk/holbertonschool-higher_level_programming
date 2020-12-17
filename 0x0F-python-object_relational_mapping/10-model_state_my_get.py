@@ -16,8 +16,8 @@ if __name__ == "__main__":
 
     for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
-
-     found = False
+ 
+    found = False
     for state in session.query(State):
         if state.name == sys.argv[4]:
             print("{}".format(state.id))
