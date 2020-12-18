@@ -1,3 +1,3 @@
 #!/bin/bash
-# script that takes a url and sends a GET request
+# sends a GET request to the URL
 curl -sLf "$1"
