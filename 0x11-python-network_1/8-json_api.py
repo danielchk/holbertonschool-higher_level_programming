@@ -4,19 +4,17 @@ to http://0.0.0.0:5000/search_user with the letter as a parameter."""
 
 import requests
 from sys import argv
-if __name__ == '__main__':
-    if len(argv) == 2:
-        req = argv[1]
+if __name__ == "__main__":
+    if len(argv) > 1:
+        q = argv[1]
     else:
-        req = ""
-    postr = requests.post('http://0.0.0.0:5000/search_user', data={'req': req})
+        q = ""
+    response = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
-        jsondic = postr.json()
-        id = jsondic.get('id')
-        name = jsondic.get('name')
-        if len(jsondic) == 0 or not id or not name:
-            print("No result")
+        j_dict = response.json()
+        if j_dict:
+            print('[{}] {}'.format(j_dict.get('id'), j_dict.get('name')))
         else:
-            print("[{}] {}".format(jsondic.get('id'), jsondic.get('name')))
+            print('No result')
     except:
-        print("Not a valid JSON")
+        print('Not a valid JSON')
